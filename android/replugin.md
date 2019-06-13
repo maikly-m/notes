@@ -41,7 +41,7 @@ RePlugin中存在两个主要ClassLoaer：
 此外，replugin-host-library会生成AndroidManifest、配置相关信息、打包等，也由Gradle插件自动完成。
 打包独立APK，或者打包为插件，可单可插，这就是RePlugin。
 
-<img src="images/replugin1.png" height="239" width="692" align="left"/>
+<img src="images/replugin1.png" height="239" width="692"/>
 
 `2、项目结构`
 
@@ -92,7 +92,7 @@ RePlugin整个项目结构，目前分为四个module，其中又分为两个gra
 宿主和插件使用的ClassLoader，以及它们的创建和Hook住时机。
 这是RePlugin唯一的Hook点，而其中插件ClassLoader和宿主ClassLoader是相互关系的。
 
-<img src="images/replugin2.png" align="left" width="657" height="296"/>
+<img src="images/replugin2.png" width="657" height="296"/>
 
 - 1、宿主的ClassLoader      
   RePluginClassLoader，宿主的ClassLoader，继承
@@ -255,7 +255,7 @@ RePlugin整个项目结构，目前分为四个module，其中又分为两个gra
 
 `大致启动流程：`
 
-<img src="images/replugin3.png" height="439" width="613" align="left"/>
+<img src="images/replugin3.png" height="439" width="613" />
 
 - 1、attachBaseContext       
   首先是从 Application 的 attachBaseContext 初始化开始。这里主要是配置
@@ -462,7 +462,7 @@ RePlugin整个项目结构，目前分为四个module，其中又分为两个gra
 
 `简易流程：`
 
-<img src="images/replugin4.png" align="left" width="657" height="296"/>
+<img src="images/replugin4.png"  width="657" height="296"/>
 
 - startActivity       
   从上面的流程图我们知道，启动插件Activity可以从RePlugin.startActivity开始，startActivity经历了
