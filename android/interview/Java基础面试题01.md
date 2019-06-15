@@ -1,27 +1,27 @@
 `目录：`
-  - [面试题](#md_面试题)
-      - [java中==和equals和hashCode的区别 ](#md_java中==和equals和hashCode的区别 )
-      - [int与integer的区别](#md_int与integer的区别)
-      - [String、StringBuffer、StringBuilder区别](#md_String、StringBuffer、StringBuilder区别)
-      - [什么是内部类？内部类的作用](#md_什么是内部类？内部类的作用)
-      - [进程和线程的区别](#md_进程和线程的区别)
-      - [final，finally，finalize的区别](#md_final，finally，finalize的区别)
-      - [Serializable 和Parcelable 的区别](#md_Serializable 和Parcelable 的区别)
-      - [静态属性和静态方法是否可以被继承？ 是否可以被重写？以及原因？](#md_静态属性和静态方法是否可以被继承？ 是否可以被重写？以及原因？)
-      - [成员内部类、静态内部类、局部内部类和匿名内部类的理解，以及项目中的应用](#md_成员内部类、静态内部类、局部内部类和匿名内部类的理解，以及项目中的应用)
-      - [string 转换成 integer的方式及原理](#md_string 转换成 integer的方式及原理)
-      - [哪些情况下的对象会被垃圾回收机制处理掉？](#md_哪些情况下的对象会被垃圾回收机制处理掉？)
-        - [ `这里有2种方法：` ](#md_ `这里有2种方法：` )
-      - [静态代理和动态代理的区别，什么场景使用？ ](#md_静态代理和动态代理的区别，什么场景使用？ )
-      - [Java中实现多态的机制是什么？](#md_Java中实现多态的机制是什么？)
-      - [说说你对Java反射的理解 ](#md_说说你对Java反射的理解 )
-      - [说说你对Java注解的理解](#md_说说你对Java注解的理解)
-      - [Java中String的了解 在源码中string是用final](#md_Java中String的了解 在源码中string是用final)
-      - [String为什么要设计成不可变的？ ](#md_String为什么要设计成不可变的？ )
-      - [Object类的equal和hashCode方法重写，为什么？](#md_Object类的equal和hashCode方法重写，为什么？)
+  - [面试题](#d11195cba9985a6572a41c4acf6edb33)
+      - [java中==和equals和hashCode的区别 ](#534cb28f81cc41fa0bba9620e2b198d1)
+      - [int与integer的区别](#688eec84df5406fecc290335f10986a1)
+      - [String、StringBuffer、StringBuilder区别](#0a77a2be62a3e0f81d91de6cbda063ed)
+      - [什么是内部类？内部类的作用](#9fef4642f266c67aa61073c195e4a79e)
+      - [进程和线程的区别](#2cd4e66fdfb2c9316d242fa16da41ffb)
+      - [final，finally，finalize的区别](#dc289942610feba4203d4a50a1917918)
+      - [Serializable 和Parcelable 的区别](#8de240f7e3ff3b427cb76763f0109b78)
+      - [静态属性和静态方法是否可以被继承？ 是否可以被重写？以及原因？](#9a7223a568c646b015bae0dc99b667df)
+      - [成员内部类、静态内部类、局部内部类和匿名内部类的理解，以及项目中的应用](#6f4d775bf0b4212fa78511adf209c64b)
+      - [string 转换成 integer的方式及原理](#e8ccd9234fff507a6172d9d1ac75e218)
+      - [哪些情况下的对象会被垃圾回收机制处理掉？](#a09207863238c9d0a31f1e67bfc70a3b)
+        - [ `这里有2种方法：` ](#46fc3548d35ee68901823c24c07eaa1e)
+      - [静态代理和动态代理的区别，什么场景使用？ ](#7f4eef11fd6b1e7017bc0521f76c8fbe)
+      - [Java中实现多态的机制是什么？](#0f96d1ea380ff722d97dfd372c0dd807)
+      - [说说你对Java反射的理解 ](#85fdc053ed0fbeb4f5861af284b39f8c)
+      - [说说你对Java注解的理解](#fbb4813c528ccca18a168b527f542b5f)
+      - [Java中String的了解 在源码中string是用final](#7f65d078768dcf494e6acddf22537c9d)
+      - [String为什么要设计成不可变的？ ](#aae6a3204746f1918ec897ad6617869c)
+      - [Object类的equal和hashCode方法重写，为什么？](#6a57341e9537930a04809d9a37bdc9b0)
 ---
-## <span id="md_面试题"/>面试题
-#### <span id="md_java中==和equals和hashCode的区别 "/>java中==和equals和hashCode的区别 
+## <span id="d11195cba9985a6572a41c4acf6edb33"/>面试题
+#### <span id="534cb28f81cc41fa0bba9620e2b198d1"/>java中==和equals和hashCode的区别 
 
 基本数据类型的==比较的值相等.
 
@@ -37,12 +37,12 @@ hashCode也是Object类的一个方法。返回一个离散的int型整数。在
 
 如果两个对象hashcode不相等，他们一定不equals。
 
-#### <span id="md_int与integer的区别"/>int与integer的区别
+#### <span id="688eec84df5406fecc290335f10986a1"/>int与integer的区别
 
 int 基本类型
 
 integer 对象 int的封装类
-#### <span id="md_String、StringBuffer、StringBuilder区别"/>String、StringBuffer、StringBuilder区别
+#### <span id="0a77a2be62a3e0f81d91de6cbda063ed"/>String、StringBuffer、StringBuilder区别
 
 String:字符串常量
 不适用于经常要改变值得情况，每次改变相当于生成一个新的对象
@@ -50,12 +50,12 @@ String:字符串常量
 StringBuffer:字符串变量 （线程安全）
 
 StringBuilder:字符串变量（线程不安全） 确保单线程下可用，效率略高于StringBuffer
-#### <span id="md_什么是内部类？内部类的作用"/>什么是内部类？内部类的作用
+#### <span id="9fef4642f266c67aa61073c195e4a79e"/>什么是内部类？内部类的作用
 
 内部类可直接访问外部类的属性
 
 Java中内部类主要分为成员内部类、局部内部类(嵌套在方法和作用域内)、匿名内部类（没构造方法）、静态内部类（static修饰的类，不能使用任何外围类的非static成员变量和方法， 不依赖外围类）
-#### <span id="md_进程和线程的区别"/>进程和线程的区别
+#### <span id="2cd4e66fdfb2c9316d242fa16da41ffb"/>进程和线程的区别
 
 进程是cpu资源分配的最小单位，线程是cpu调度的最小单位。
 
@@ -65,26 +65,26 @@ Java中内部类主要分为成员内部类、局部内部类(嵌套在方法和
 
 一个线程只能属于一个进程，线程可直接使用同进程的资源,线程依赖于进程而存在。 
 
-#### <span id="md_final，finally，finalize的区别"/>final，finally，finalize的区别
+#### <span id="dc289942610feba4203d4a50a1917918"/>final，finally，finalize的区别
 
 final:修饰类、成员变量和成员方法，类不可被继承，成员变量不可变，成员方法不可重写
 
 finally:与try...catch...共同使用，确保无论是否出现异常都能被调用到
 
 finalize:类的方法,垃圾回收之前会调用此方法,子类可以重写finalize()方法实现对资源的回收
-#### <span id="md_Serializable 和Parcelable 的区别"/>Serializable 和Parcelable 的区别
+#### <span id="8de240f7e3ff3b427cb76763f0109b78"/>Serializable 和Parcelable 的区别
 
 Serializable Java 序列化接口 在硬盘上读写
 读写过程中有大量临时变量的生成，内部执行大量的i/o操作，效率很低。
 
 Parcelable Android 序列化接口 效率高 使用麻烦 在内存中读写（AS有相关插件 一键生成所需方法） ，对象不能保存到磁盘中
-#### <span id="md_静态属性和静态方法是否可以被继承？ 是否可以被重写？以及原因？"/>静态属性和静态方法是否可以被继承？ 是否可以被重写？以及原因？
+#### <span id="9a7223a568c646b015bae0dc99b667df"/>静态属性和静态方法是否可以被继承？ 是否可以被重写？以及原因？
 
 可继承 不可重写 而是被隐藏
 
 如果子类里面定义了静态方法和属性，那么这时候父类的静态方法或属性称之为"隐藏"。
 如果你想要调用父类的静态方法和属性，直接通过父类名.方法或变量名完成。
-#### <span id="md_成员内部类、静态内部类、局部内部类和匿名内部类的理解，以及项目中的应用"/>成员内部类、静态内部类、局部内部类和匿名内部类的理解，以及项目中的应用
+#### <span id="6f4d775bf0b4212fa78511adf209c64b"/>成员内部类、静态内部类、局部内部类和匿名内部类的理解，以及项目中的应用
 
 Java中内部类主要分为成员内部类、局部内部类(嵌套在方法和作用域内)、匿名内部类（没构造方法）、
 静态内部类（static修饰的类，不能使用任何外围类的非static成员变量和方法，不依赖外围类）
@@ -95,13 +95,13 @@ Java中内部类主要分为成员内部类、局部内部类(嵌套在方法和
 因为Java不支持多继承，支持实现多个接口。但有时候会存在一些使用接口很难解决的问题，
 这个时候我们可以利用内部类提供的、可以继承多个具体的或者抽象的类的能力来解决这些程序设计问题。
 可以这样说，接口只是解决了部分问题，而内部类使得多重继承的解决方案变得更加完整。
-#### <span id="md_string 转换成 integer的方式及原理"/>string 转换成 integer的方式及原理
+#### <span id="e8ccd9234fff507a6172d9d1ac75e218"/>string 转换成 integer的方式及原理
 
 String integer Integer.parseInt(string);
 
 Integerstring Integer.toString();
 
-#### <span id="md_哪些情况下的对象会被垃圾回收机制处理掉？"/>哪些情况下的对象会被垃圾回收机制处理掉？
+#### <span id="a09207863238c9d0a31f1e67bfc70a3b"/>哪些情况下的对象会被垃圾回收机制处理掉？
   1.所有实例都没有活动线程访问。
   
   2.没有被其他任何实例访问的循环引用实例。 
@@ -110,7 +110,7 @@ Integerstring Integer.toString();
   判断实例是否符合垃圾收集的条件都依赖于它的引用类型。
   要判断怎样的对象是没用的对象。
   
-##### <span id="md_ `这里有2种方法：` "/> `这里有2种方法：` 
+##### <span id="46fc3548d35ee68901823c24c07eaa1e"/> `这里有2种方法：` 
   
   1.采用标记计数的方法：
   
@@ -121,7 +121,7 @@ Integerstring Integer.toString();
   2.采用根搜索算法：
   从一个根出发，搜索所有的可达对象，这样剩下的那些对象就是需要被回收的
   
-#### <span id="md_静态代理和动态代理的区别，什么场景使用？ "/>静态代理和动态代理的区别，什么场景使用？ 
+#### <span id="7f4eef11fd6b1e7017bc0521f76c8fbe"/>静态代理和动态代理的区别，什么场景使用？ 
 静态代理类：
 
 由程序员创建或由特定工具自动生成源代码，再对其编译。在程序运行前，代理类的.class文件就已经存在了。
@@ -130,12 +130,12 @@ Integerstring Integer.toString();
 
 在程序运行时，运用反射机制动态创建而成。 
 
-#### <span id="md_Java中实现多态的机制是什么？"/>Java中实现多态的机制是什么？
+#### <span id="0f96d1ea380ff722d97dfd372c0dd807"/>Java中实现多态的机制是什么？
 答：方法的重写Overriding和重载Overloading是Java多态性的不同表现
 重写Overriding是父类与子类之间多态性的一种表现
 重载Overloading是一个类中多态性的一种表现.
  
-#### <span id="md_说说你对Java反射的理解 "/>说说你对Java反射的理解 
+#### <span id="85fdc053ed0fbeb4f5861af284b39f8c"/>说说你对Java反射的理解 
 JAVA反射机制是在运行状态中, 对于任意一个类,
 都能够知道这个类的所有属性和方法; 对于任意一个对象,
 都能够调用它的任意一个方法和属性。
@@ -147,17 +147,17 @@ Field[]、某个属性的完整信息、构造器
 Constructors），调用类的属性或方法自己的总结：
 在运行过程中获得类、对象、方法的所有信息
  
-#### <span id="md_说说你对Java注解的理解"/>说说你对Java注解的理解
+#### <span id="fbb4813c528ccca18a168b527f542b5f"/>说说你对Java注解的理解
 元注解
 
 元注解的作用就是负责注解其他注解。java5.0的时候，定义了4个标准的meta-annotation类型，它们用来提供对其他注解的类型作说明。
 
 1.@Target 2.@Retention 3.@Documented 4.@Inherited 
 
-#### <span id="md_Java中String的了解 在源码中string是用final"/>Java中String的了解 在源码中string是用final
+#### <span id="7f65d078768dcf494e6acddf22537c9d"/>Java中String的了解 在源码中string是用final
 进行修饰，它是不可更改，不可继承的常量。
 
-#### <span id="md_String为什么要设计成不可变的？ "/>String为什么要设计成不可变的？ 
+#### <span id="aae6a3204746f1918ec897ad6617869c"/>String为什么要设计成不可变的？ 
 1、字符串池的需求
 
 字符串池是方法区（Method
@@ -177,7 +177,7 @@ String广泛的用于java 类中的参数，如：网络连接（Network
 connetion），打开文件（opening files
 ）等等。如果String不是不可变的，网络连接、文件将会被改变——这将会导致一系列的安全威胁。
 操作的方法本以为连接上了一台机器，但实际上却不是。由于反射中的参数都是字符串，同样，也会引起一系列的安全问题。
-#### <span id="md_Object类的equal和hashCode方法重写，为什么？"/>Object类的equal和hashCode方法重写，为什么？
+#### <span id="6a57341e9537930a04809d9a37bdc9b0"/>Object类的equal和hashCode方法重写，为什么？
 首先equals与hashcode间的关系是这样的：
 
 1、如果两个对象相同（即用equals比较返回true），那么它们的hashCode值一定要相同；
