@@ -1,75 +1,42 @@
 `目录：`
-- [面试题
-](#5a9ca62f26b310296116027d1147fc86)
-      - [Handler的原理
-](#447b8ce36051c6fec593737db87dfc70)
-      - [Binder机制原理
-](#67e3f5f8abaaa1bf39cf9285c490bc97)
-      - [热修复的原理 
-](#34e743e03b8aabd2f42af1640224e06b)
-      - [Android内存泄露及管理
-](#629deaf0b97cbb296e5de8c01ab40795)
-        - [内存泄露原因：
-](#754d4f491ace2f5405deaac2338a9f75)
-      - [Fragment与Fragment、Activity通信的方式
-](#12329ca0e43c2be8bab9038b213eeae0)
-      - [Android UI适配
-](#e78c94b6022d2aaf648c51c1a57d1587)
-      - [app优化 
-](#fe8a035c1327060cbae6b33b9cd077e5)
-        - [优化：
-](#fef019f253c92fa2c351ff8992bb61ed)
-      - [图片优化
-](#e4b5d363e784c689c5ebe4a21268e877)
-      - [HybridApp WebView和JS交互
-](#6130c07060346cf2cf149a4b20af9acf)
-      - [JAVA GC原理
-](#a4bff6b69c00b5f8ea7ed52d7eef1b42)
-      - [ ANR 
-](#ebcc1f42e87f150db3e594a7ed51cbe4)
-      - [设计模式 
-](#202aa6b75cc303758063c834eee76e4d)
-      - [RxJava 
-](#742bb2021ea884ced7bd4ab6e941231f)
-      - [MVP，MVC，MVVM 
-](#4e855fca55abe727199fb493115533b3)
-      - [手写算法（选择冒泡必须要会） 
-](#04500026e55307f0840334f3f2dae493)
-      - [JNI 
-](#88874f89dd562da9bd62bf90a0ff49a9)
-      - [RecyclerView和ListView的区别
-](#e774af69e7014d747922202e369834d3)
-      - [Universal-ImageLoader，Picasso，Fresco，Glide对比 
-](#9ccdca86b37d2ac9751a000b938c9572)
-      - [Xutils, OKhttp, Volley, Retrofit对比
-](#af322a32839003e8cf52e39e3a9e9a47)
-    - [Java
-](#3072d0b15b81c12eaa2a1ace2637616d)
-      - [线程中sleep和wait的区别
-](#5c520a4f0c61911410db232afd96594e)
-      - [Thread中的start()和run()方法有什么区别
-](#bd46132b2df485b2366623bca50a1405)
-      - [关键字final和static是怎么使用的
-](#34d6ddba58c20813c42f6295973fc019)
-      - [String,StringBuffer,StringBuilder区别
-](#6098bf4b6fc76feac6aa2e54c0525caa)
-      - [Java中重载和重写的区别：
-](#fe15fc726b9105534a2aa1c613be934a)
-      - [Http https区别 此处延伸：https的实现原理
-](#d9ca43b64d25ec4e35e8c24ad5d72a6d)
-      - [Http位于TCP/IP模型中的第几层？为什么说Http是可靠的数据传输协议？
-](#7b66a6736152b57c8f616616b2cb0ecc)
-      - [HTTP链接的特点
-](#3a6f6fb59de6c358cf919e26cb13807b)
-      - [TCP和UDP的区别
-](#ae03ec6b8f865a0c3d6f7a14b34cef66)
-      - [Socket建立网络连接的步骤
-](#5f8c1b40e74fe3c5c8ee6cd854f2ef30)
+  - [面试题](#d11195cba9985a6572a41c4acf6edb33)
+      - [Handler的原理](#73b6e7a611664773efc2cff20922ba56)
+      - [Binder机制原理](#db559f8440a393fee53b6a0082a3bd14)
+      - [热修复的原理 ](#7f65781ae13f5334571854ab2116c0ff)
+      - [Android内存泄露及管理](#1e33e319686773adf5dca98d451aa0a5)
+        - [内存泄露原因：](#15d8c4186cfecadd297f2ab5c5aae17b)
+      - [Fragment与Fragment、Activity通信的方式](#cc117d22db29bd51815f3a0401c29baf)
+      - [Android UI适配](#b1fa8e7b610f82bba2cd2a19872f8632)
+      - [app优化 ](#c2dcd19aa7cae42ad9108feab8268b96)
+        - [优化：](#5e0ada5fd61cc852bc17fa1c593670ed)
+      - [图片优化](#1de33821a53101e8d846e85f3618bbba)
+      - [HybridApp WebView和JS交互](#8af4b5f76bece869eb465977ff337426)
+      - [JAVA GC原理](#4f8816565e8a4d8fff9eff5d0d939d3d)
+      - [ ANR ](#b8319749b4c2c0221d0f117dbe06de6e)
+      - [设计模式 ](#8f4832ec71ecc5b67c07889892f2a8e8)
+      - [RxJava ](#b5035777bfa3df19db181b25289a3166)
+      - [MVP，MVC，MVVM ](#73ee0ad6f84149f63602b6fdc704b573)
+      - [手写算法（选择冒泡必须要会） ](#2f7b9656a68b01a5d2639f5d45c212d4)
+      - [JNI ](#ddba29c1b4e2160f23b2dda35c5c987f)
+      - [RecyclerView和ListView的区别](#b6b433b5cacc1e9fbfb14a3eddef1760)
+      - [Universal-ImageLoader，Picasso，Fresco，Glide对比 ](#95ea4efe05cf8de8addaaed9b5269b98)
+      - [Xutils, OKhttp, Volley, Retrofit对比](#ace088d91e5621d12cf218459ed4d309)
+    - [Java](#bc6f0dc77f5a1471c9d7508e5c1ca9e5)
+      - [线程中sleep和wait的区别](#221070ece5a64d8100c3c238649f7c49)
+      - [Thread中的start()和run()方法有什么区别](#1cc6a5f640233112a5f01f455bc632b1)
+      - [关键字final和static是怎么使用的](#bc82c923cd1029d90c2364db06a43f3f)
+      - [String,StringBuffer,StringBuilder区别](#ceddc2912f790275e025482fc4e6ff32)
+      - [Java中重载和重写的区别：](#7293b7faa85f1f247da5fca3efee8d29)
+      - [Http https区别 此处延伸：https的实现原理](#60f1e602574046dd5f97e1af04abcb46)
+      - [Http位于TCP/IP模型中的第几层？为什么说Http是可靠的数据传输协议？](#0b3ea2154a389671e6a63967792ef477)
+      - [HTTP链接的特点](#039f64d7a66d0aa6daf84da4c1e0b5c5)
+      - [TCP和UDP的区别](#a17f8cff1cfa25a584fc0737bfb27b6d)
+      - [Socket建立网络连接的步骤](#9b19b47f3cc7824234e71a0ea19bde6b)
 ---
-# <span id="5a9ca62f26b310296116027d1147fc86"/>面试题
+## <span id="d11195cba9985a6572a41c4acf6edb33"/>面试题
 
 
-#### <span id="447b8ce36051c6fec593737db87dfc70"/>Handler的原理
+#### <span id="73b6e7a611664773efc2cff20922ba56"/>Handler的原理
 
 Android中主线程是不能进行耗时操作的，子线程是不能进行更新UI的。所以就有了handler，它的作用就是实现线程之间的通信。
 
@@ -77,7 +44,7 @@ handler整个流程中，主要有四个对象，handler，Message,MessageQueue,
 我们通过要传送的消息保存到Message中，handler通过调用sendMessage方法将Message发送到MessageQueue中，Looper对象就会不断的调用loop()方法
 不断的从MessageQueue中取出Message交给handler进行处理。从而实现线程之间的通信。
 
-#### <span id="67e3f5f8abaaa1bf39cf9285c490bc97"/>Binder机制原理
+#### <span id="db559f8440a393fee53b6a0082a3bd14"/>Binder机制原理
 
 在Android系统的Binder机制中，是有Client,Service,ServiceManager,Binder驱动程序组成的，其中Client，service，Service
 Manager运行在用户空间，Binder驱动程序是运行在内核空间的。
@@ -90,7 +57,7 @@ Manager通过open和ioctl文件操作相应的方法与Binder驱动程序进行�
 而Client和Service之间的进程间通信是通过Binder驱动程序间接实现的。而Binder
 Manager是一个守护进程，用来管理Service，并向Client提供查询Service接口的能力。
 
-#### <span id="34e743e03b8aabd2f42af1640224e06b"/>热修复的原理 
+#### <span id="7f65781ae13f5334571854ab2116c0ff"/>热修复的原理 
 
 我们知道Java虚拟机 —— JVM
 是加载类的class文件的，而Android虚拟机——Dalvik/ART VM
@@ -101,7 +68,7 @@ Manager是一个守护进程，用来管理Service，并向Client提供查询Ser
 
 而热修复的解决方法就是将新的dex添加到该集合中，并且是在旧的dex的前面，
 所以就会优先被取出来并且return返回。 
-#### <span id="629deaf0b97cbb296e5de8c01ab40795"/>Android内存泄露及管理
+#### <span id="1e33e319686773adf5dca98d451aa0a5"/>Android内存泄露及管理
 
 （1）内存溢出（OOM）和内存泄露（对象无法被回收）的区别。
 
@@ -113,7 +80,7 @@ outofmemory：是指程序在申请内存时，没有足够的内存空间供其
 
 是指程序在申请内存后，无法释放已申请的内存空间，一次内存泄露危害可以忽略，但内存泄露堆积后果很严重，无论多少内存,迟早会被占光
 
-##### <span id="754d4f491ace2f5405deaac2338a9f75"/>内存泄露原因：
+##### <span id="15d8c4186cfecadd297f2ab5c5aae17b"/>内存泄露原因：
 
 
 一、Handler 引起的内存泄漏。
@@ -143,7 +110,7 @@ outofmemory：是指程序在申请内存时，没有足够的内存空间供其
 
 通常会把一些对象装入到集合中，当不使用的时候一定要记得及时清理集合，让相关对象不再被引用。
 
-#### <span id="12329ca0e43c2be8bab9038b213eeae0"/>Fragment与Fragment、Activity通信的方式
+#### <span id="cc117d22db29bd51815f3a0401c29baf"/>Fragment与Fragment、Activity通信的方式
 
 1.直接在一个Fragment中调用另外一个Fragment中的方法 
 
@@ -153,11 +120,11 @@ outofmemory：是指程序在申请内存时，没有足够的内存空间供其
 
 4.Fragment直接调用Activity中的public方法 
 
-#### <span id="e78c94b6022d2aaf648c51c1a57d1587"/>Android UI适配
+#### <span id="b1fa8e7b610f82bba2cd2a19872f8632"/>Android UI适配
 
 字体使用sp,使用dp，多使用match_parent，wrap_content，weight
 图片资源，不同图片的的分辨率，放在相应的文件夹下可使用百分比代替。 
-#### <span id="fe8a035c1327060cbae6b33b9cd077e5"/>app优化 
+#### <span id="c2dcd19aa7cae42ad9108feab8268b96"/>app优化 
 
 app优化:
     (工具：Hierarchy Viewer 分析布局 工具：TraceView测试分析耗时的) 
@@ -181,7 +148,7 @@ App进程可能还在运行, 但是activity需要重建。 (2)用户退出App后
 系统可能由于内存原因将App杀死, 进程和activity都需要重启,
 但是可以在onCreate中将被动杀死锁保存的状态(saved instance state)恢复。
 
-##### <span id="fef019f253c92fa2c351ff8992bb61ed"/>优化：
+##### <span id="5e0ada5fd61cc852bc17fa1c593670ed"/>优化：
 
 Application的onCreate（特别是第三方SDK初始化），首屏Activity的渲染都不要进行耗时操作，如果有，就可以放到子线程或者IntentService中
 布局优化 尽量不要过于复杂的嵌套。可以使用<include>，<merge>，<ViewStub>
@@ -216,7 +183,7 @@ Gzip压缩：使用Gzip来压缩request和response, 减少传输数据量,
 
 网络缓存：适当的缓存,
 既可以让我们的应用看起来更快, 也能避免一些不必要的流量消耗.
-#### <span id="e4b5d363e784c689c5ebe4a21268e877"/>图片优化
+#### <span id="1de33821a53101e8d846e85f3618bbba"/>图片优化
 
 (1)对图片本身进行操作。尽量不要使用setImageBitmap、setImageResource、
 BitmapFactory.decodeResource来设置一张大图，因为这些方法在完成decode后，
@@ -225,7 +192,7 @@ BitmapFactory.decodeResource来设置一张大图，因为这些方法在完成d
 (2)图片进行缩放的比例，SDK中建议其值是2的指数值,值越大会导致图片不清晰。
 
 (3)不用的图片记得调用图片的recycle()方法
-#### <span id="6130c07060346cf2cf149a4b20af9acf"/>HybridApp WebView和JS交互
+#### <span id="8af4b5f76bece869eb465977ff337426"/>HybridApp WebView和JS交互
 
 Android与JS通过WebView互相调用方法，实际上是： Android去调用JS的代码
 
@@ -258,13 +225,13 @@ JS去调用Android的代码
 这种方式的优点：不存在方式1的漏洞；
 
 缺点：JS获取Android方法的返回值复杂。
-#### <span id="a4bff6b69c00b5f8ea7ed52d7eef1b42"/>JAVA GC原理
+#### <span id="4f8816565e8a4d8fff9eff5d0d939d3d"/>JAVA GC原理
 
 垃圾收集算法的核心思想是：对虚拟机可用内存空间，即堆空间中的对象进行识别，如果对象正在被引用，那么称其为存活对象
 ，反之，如果对象不再被引用，则为垃圾对象，可以回收其占据的空间，用于再分配。
 
 垃圾收集算法的选择和垃圾收集系统参数的合理调节直接影响着系统性能。
-#### <span id="ebcc1f42e87f150db3e594a7ed51cbe4"/> ANR 
+#### <span id="b8319749b4c2c0221d0f117dbe06de6e"/> ANR 
 
 ANR全名Application Not Responding, 也就是"应用无响应".
 
@@ -283,7 +250,7 @@ ANR全名Application Not Responding, 也就是"应用无响应".
     (3)避免在IntentReceiver里启动一个Activity，因为它会创建一个新的画面，并从当前用户正在运行的程序上抢夺焦点。
     (4)service是运行在主线程的，所以在service中做耗时操作，必须要放在子线程中。
 
-#### <span id="202aa6b75cc303758063c834eee76e4d"/>设计模式 
+#### <span id="8f4832ec71ecc5b67c07889892f2a8e8"/>设计模式 
 
 单例模式：分为恶汉式和懒汉式 
 
@@ -317,9 +284,9 @@ ANR全名Application Not Responding, 也就是"应用无响应".
         } 
     }
 
-#### <span id="742bb2021ea884ced7bd4ab6e941231f"/>RxJava 
+#### <span id="b5035777bfa3df19db181b25289a3166"/>RxJava 
 
-#### <span id="4e855fca55abe727199fb493115533b3"/>MVP，MVC，MVVM 
+#### <span id="73ee0ad6f84149f63602b6fdc704b573"/>MVP，MVC，MVVM 
 
 此处延伸：手写mvp例子，与mvc之间的区别，mvp的优势
 
@@ -333,9 +300,9 @@ View和model是可以直接通信的。而MVP模式则是分离的更加彻底�
 分工更加明确Model--业务逻辑和实体模型，view--负责与用户交互，Presenter
 负责完成View于Model间的交互，MVP和MVC最大的区别是MVC中是允许Model和View进行交互的，而MVP中很明显，
 Model与View之间的交互由Presenter完成。还有一点就是Presenter与View之间的交互是通过接口的
-#### <span id="04500026e55307f0840334f3f2dae493"/>手写算法（选择冒泡必须要会） 
+#### <span id="2f7b9656a68b01a5d2639f5d45c212d4"/>手写算法（选择冒泡必须要会） 
 
-#### <span id="88874f89dd562da9bd62bf90a0ff49a9"/>JNI 
+#### <span id="ddba29c1b4e2160f23b2dda35c5c987f"/>JNI 
 
 
     (1)安装和下载Cygwin，下载 Android NDK
@@ -343,7 +310,7 @@ Model与View之间的交互由Presenter完成。还有一点就是Presenter与Vi
     (4)JNI生成动态链接库.so文件
     (5)将动态链接库复制到java工程，在java工程中调用，运行java工程即可
 
-#### <span id="e774af69e7014d747922202e369834d3"/>RecyclerView和ListView的区别
+#### <span id="b6b433b5cacc1e9fbfb14a3eddef1760"/>RecyclerView和ListView的区别
 
 RecyclerView可以完成ListView,GridView的效果，还可以完成瀑布流的效果。同时还可以设置列表的滚动方向（垂直或者水平）；
 
@@ -356,7 +323,7 @@ RecyclerView提供了API来实现item的动画效果。 在性能上：
 如果需要频繁的刷新数据，需要添加动画，则RecyclerView有较大的优势。
 如果只是作为列表展示，则两者区别并不是很大。
 
-#### <span id="9ccdca86b37d2ac9751a000b938c9572"/>Universal-ImageLoader，Picasso，Fresco，Glide对比 
+#### <span id="95ea4efe05cf8de8addaaed9b5269b98"/>Universal-ImageLoader，Picasso，Fresco，Glide对比 
 
 Fresco 是
 Facebook 推出的开源图片缓存工具，主要特点包括：两个内存缓存加上 Native
@@ -409,7 +376,7 @@ Universal-ImageLoader：（估计由于HttpClient被Google放弃，作者就放�
 图片默认使用默认 RGB_565 而不是 ARGB_888，虽然清晰度差些，但图片更小，也可配置到 ARGB_888。
 6. Glide 可以通过 signature 或不使用本地缓存支持 url 过期
 
-#### <span id="af322a32839003e8cf52e39e3a9e9a47"/>Xutils, OKhttp, Volley, Retrofit对比
+#### <span id="ace088d91e5621d12cf218459ed4d309"/>Xutils, OKhttp, Volley, Retrofit对比
 
 `Xutils:`这个框架非常全面，可以进行网络请求，可以进行图片加载处理，可以数据储存，还可以对view进行注解，
 使用这个框架非常方便，但是缺点也是非常明显的，使用这个项目，会导致项目对这个框架依赖非常的严重，
@@ -460,20 +427,20 @@ Retrofit。所以这两个库相比，Retrofit更有优势，在能掌握两个�
 Retrofit。但是Retrofit门槛要比Volley稍高些，要理解他的原理，各种用法，
 想彻底搞明白还是需要花些功夫的，如果你对它一知半解，那还是建议在商业项目使用Volley吧。
 
-### <span id="3072d0b15b81c12eaa2a1ace2637616d"/>Java
+### <span id="bc6f0dc77f5a1471c9d7508e5c1ca9e5"/>Java
 
-#### <span id="5c520a4f0c61911410db232afd96594e"/>线程中sleep和wait的区别
+#### <span id="221070ece5a64d8100c3c238649f7c49"/>线程中sleep和wait的区别
 
 (1)这两个方法来自不同的类，sleep是来自Thread，wait是来自Object；
 
 (2)sleep方法没有释放锁，而wait方法释放了锁。
 
 (3)wait,notify,notifyAll只能在同步控制方法或者同步控制块里面使用，而sleep可以在任何地方使用。
-#### <span id="bd46132b2df485b2366623bca50a1405"/>Thread中的start()和run()方法有什么区别
+#### <span id="1cc6a5f640233112a5f01f455bc632b1"/>Thread中的start()和run()方法有什么区别
 
 start()方法是用来启动新创建的线程，而start()内部调用了run()方法，这和直接调用run()方法是不一样的，如果直接调用run()方法，
 则和普通的方法没有什么区别。 
-#### <span id="34d6ddba58c20813c42f6295973fc019"/>关键字final和static是怎么使用的
+#### <span id="bc82c923cd1029d90c2364db06a43f3f"/>关键字final和static是怎么使用的
 
 final:
 1. final变量即为常量，只能赋值一次。
@@ -487,19 +454,19 @@ static：
    static方法可以直接通过类名调用，任何的实例也都可以调用，因此static方法中不能用this和super关键字，
    不能直接访问所属类的实例变量和实例方法(就是不带static的成员变量和成员成员方法)，只能访问所属类的静态成员变量和成员方法。
    
-#### <span id="6098bf4b6fc76feac6aa2e54c0525caa"/>String,StringBuffer,StringBuilder区别
+#### <span id="ceddc2912f790275e025482fc4e6ff32"/>String,StringBuffer,StringBuilder区别
 
 1、三者在执行速度上：StringBuilder > StringBuffer > String
 (由于String是常量，不可改变，拼接时会重新创建新的对象)。
 
 2、StringBuffer是线程安全的，StringBuilder是线程不安全的。（由于StringBuffer有缓冲区）
-#### <span id="fe15fc726b9105534a2aa1c613be934a"/>Java中重载和重写的区别：
+#### <span id="7293b7faa85f1f247da5fca3efee8d29"/>Java中重载和重写的区别：
 
 1、重载：一个类中可以有多个相同方法名的，但是参数类型和个数都不一样。这是重载。
 
 2、重写：子类继承父类，则子类可以通过实现父类中的方法，从而新的方法把父类旧的方法覆盖。
 
-#### <span id="d9ca43b64d25ec4e35e8c24ad5d72a6d"/>Http https区别 此处延伸：https的实现原理
+#### <span id="60f1e602574046dd5f97e1af04abcb46"/>Http https区别 此处延伸：https的实现原理
 
 1、https协议需要到ca申请证书，一般免费证书较少，因而需要一定费用。
 
@@ -517,7 +484,7 @@ https实现原理：
     （4）客户端的浏览器根据双方同意的安全等级，建立会话密钥，然后利用网站的公钥将会话密钥加密，并传送给网站。
     （5）Web服务器利用自己的私钥解密出会话密钥。
     （6）Web服务器利用会话密钥加密与客户端之间的通信。
-#### <span id="7b66a6736152b57c8f616616b2cb0ecc"/>Http位于TCP/IP模型中的第几层？为什么说Http是可靠的数据传输协议？
+#### <span id="0b3ea2154a389671e6a63967792ef477"/>Http位于TCP/IP模型中的第几层？为什么说Http是可靠的数据传输协议？
 
 tcp/ip的五层模型： 
 
@@ -526,11 +493,11 @@ tcp/ip的五层模型：
 其中tcp/ip位于模型中的网络层，处于同一层的还有ICMP（网络控制信息协议）。http位于模型中的应用层
 由于tcp/ip是面向连接的可靠协议，而http是在传输层基于tcp/ip协议的，所以说http是可靠的数据传输协议。
 
-#### <span id="3a6f6fb59de6c358cf919e26cb13807b"/>HTTP链接的特点
+#### <span id="039f64d7a66d0aa6daf84da4c1e0b5c5"/>HTTP链接的特点
 
 HTTP连接最显著的特点是客户端发送的每次请求都需要服务器回送响应，在请求结束后，会主动释放连接。
 从建立连接到关闭连接的过程称为“一次连接”。 
-#### <span id="ae03ec6b8f865a0c3d6f7a14b34cef66"/>TCP和UDP的区别
+#### <span id="a17f8cff1cfa25a584fc0737bfb27b6d"/>TCP和UDP的区别
 
 tcp是面向连接的，由于tcp连接需要三次握手，所以能够最低限度的降低风险，保证连接的可靠性。
 
@@ -538,7 +505,7 @@ udp
 不是面向连接的，udp建立连接前不需要与对象建立连接，无论是发送还是接收，都没有发送确认信号。所以说udp是不可靠的。
 由于udp不需要进行确认连接，使得UDP的开销更小，传输速率更高，所以实时行更好。
 
-#### <span id="5f8c1b40e74fe3c5c8ee6cd854f2ef30"/>Socket建立网络连接的步骤
+#### <span id="9b19b47f3cc7824234e71a0ea19bde6b"/>Socket建立网络连接的步骤
 
 建立Socket连接至少需要一对套接字，其中一个运行与客户端--ClientSocket，一个运行于服务端--ServiceSocket
 

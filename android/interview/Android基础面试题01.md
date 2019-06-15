@@ -1,5 +1,5 @@
 `目录：`
-- [面试题](#d11195cba9985a6572a41c4acf6edb33)
+  - [面试题](#d11195cba9985a6572a41c4acf6edb33)
       - [Binder的工作机制](#5fc035b7e532263b4b39b6f56ffb2a04)
       - [view的事件分发和view的工作原理](#3a5638a7dd16fb97c619aef6079156bd)
       - [Android中性能优化](#dd5938704e776618f89676a78f31f072)
@@ -29,7 +29,7 @@
       - [Android中跨进程通讯的几种方式 ](#459413dcb7f50313cd816c07d08b3244)
       - [AIDL理解 此处延伸：简述Binder AIDL:](#3bf74ea1657f788b7f6ef24ba33c311f)
 ---
-# <span id="d11195cba9985a6572a41c4acf6edb33"/>面试题
+## <span id="d11195cba9985a6572a41c4acf6edb33"/>面试题
 
 
 #### <span id="5fc035b7e532263b4b39b6f56ffb2a04"/>Binder的工作机制
