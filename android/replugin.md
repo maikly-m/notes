@@ -1,4 +1,21 @@
-# Replugin
+`目录：`
+- [Replugin
+](#66a370bdf86eb746a2d683a62d7be6f3)
+    - [classloader
+](#93d19e9e0662e13a4727460f02b15832)
+    - [Replugin项目原理和结构分析
+](#23622594a63f37f8c4d6defddd341dd4)
+    - [Replugin的ClassLoader
+](#29622153a3a7c637bdb3f73bbe456f03)
+    - [Replugin的相关类介绍 
+](#3a8a8603172dda9a4c411945bc1e8912)
+    - [Replugin的初始化
+](#ce79317cd1ba7d587eb15d68eb7787dc)
+    - [Replugin启动Activity
+](#f691a2ccbc2cd3b7d5c0dea0965708e5)
+---
+# <span id="66a370bdf86eb746a2d683a62d7be6f3"/>Replugin
+
 
 `简介：`
 
@@ -13,7 +30,8 @@ Hook也极大的提高了实现复杂程度性，其中主要体现在：
     初始化、加载、启动等逻辑比较复杂。
 
 
-### classloader
+### <span id="93d19e9e0662e13a4727460f02b15832"/>classloader
+
 
 其中常见的Loader有：
 
@@ -26,7 +44,8 @@ RePlugin中存在两个主要ClassLoaer：
 1、RePluginClassLoader： 宿主App中的Loader，继承PathClassLoader，也是唯一Hook住系统的Loader。      
 2、PluginDexClassLoader： 加载插件的Loader，继承DexClassLoader。用来做一些“更高级”的特性。
 
-### Replugin项目原理和结构分析
+### <span id="23622594a63f37f8c4d6defddd341dd4"/>Replugin项目原理和结构分析
+
 
 `1、基础原理`
 
@@ -87,7 +106,8 @@ RePlugin整个项目结构，目前分为四个module，其中又分为两个gra
     其中的RePlugin、RePluginInternal、PluginServiceClient都是反射宿主App ：replugin-host-library 中的 RePlugin 、 
     RePluginInternal 、PluginServiceClient 类方法。
     
-### Replugin的ClassLoader
+### <span id="29622153a3a7c637bdb3f73bbe456f03"/>Replugin的ClassLoader
+
 
 宿主和插件使用的ClassLoader，以及它们的创建和Hook住时机。
 这是RePlugin唯一的Hook点，而其中插件ClassLoader和宿主ClassLoader是相互关系的。
@@ -241,7 +261,8 @@ RePlugin整个项目结构，目前分为四个module，其中又分为两个gra
   创建：上面1、2中两个Loader，是宿主在初始化时创建的，初始化时可以选择配置RePluginCallbacks，callback中提供方法默认创建Loader，
   可以实现自定义的ClassLoader，但是需要继承以上的Loader。
   
-### Replugin的相关类介绍 
+### <span id="3a8a8603172dda9a4c411945bc1e8912"/>Replugin的相关类介绍 
+
 1. RePlugin**
    ：RePlugin的对外入口类，提供install、uninstall、preload、startActivity、fetchPackageInfo、fetchComponentList，
 1. fetchClassLoader等等统一的方法入口，用户操作的主要是它。
@@ -251,7 +272,8 @@ RePlugin整个项目结构，目前分为四个module，其中又分为两个gra
 6. PmLocalImpl：各种本地接口实现，如startActivity，getActivityInfo，loadPluginActivity等。
 7. PmInternalImpl：类似Activity的接口实现，内部实现了真正startActivity的逻辑、还有插件Activity生命周期的接口。
 
-### Replugin的初始化
+### <span id="ce79317cd1ba7d587eb15d68eb7787dc"/>Replugin的初始化
+
 
 `大致启动流程：`
 
@@ -458,7 +480,8 @@ RePlugin整个项目结构，目前分为四个module，其中又分为两个gra
         }
     ```
     
-### Replugin启动Activity
+### <span id="f691a2ccbc2cd3b7d5c0dea0965708e5"/>Replugin启动Activity
+
 
 `简易流程：`
 
