@@ -1,6 +1,22 @@
-## https 详解
+`目录：`
+  - [https 详解
+](#d1fcdc34c6d047732e6323650dd76d79)
+    - [`协议: ` 
+](#fcfb3de927cb21dca6cb4d960a476a00)
+    - [`加密算法：`
+](#c4612ea292104cccdbce50407cb2e119)
+  - [https 加密过程
+](#1b8329b5fb3f19608fea91a9748eb29c)
+    - [`一、HTTP 访问过程`
+](#53ce07487a58af1c4f22e77db403fb07)
+    - [`二、HTTP 向 HTTPS 演化的过程`
+](#8ab9eb07fe69e34212efe6987c7d2d59)
+---
+## <span id="d1fcdc34c6d047732e6323650dd76d79"/>https 详解
 
-### `协议: ` 
+
+### <span id="fcfb3de927cb21dca6cb4d960a476a00"/>`协议: ` 
+
 
 1、HTTP协议（HyperTextTransferProtocol，超文本传输协议）：是客户端浏览器或其他程序与Web服务器之间的应用层通信协议。
 
@@ -17,7 +33,8 @@ TLS（Transport Layer Security，传输层安全）：其前身是 SSL，它最�
 1999年从 3.1 开始被 IETF 标准化并改名，发展至今已经有 TLS 1.0、TLS 1.1、TLS 1.2 三个版本。SSL3.0和TLS1.0由于存在安全漏洞，
 已经很少被使用到。TLS 1.3 改动会比较大，目前正在推进中，目前使用最广泛的是TLS 1.1、TLS 1.2。
 
-### `加密算法：`
+### <span id="c4612ea292104cccdbce50407cb2e119"/>`加密算法：`
+
 
 1、对称加密
 
@@ -43,9 +60,11 @@ TLS（Transport Layer Security，传输层安全）：其前身是 SSL，它最�
 签名就是在信息的后面再加上一段内容（信息经过hash后的值），可以证明信息没有被修改过。
 hash值一般都会加密后（也就是签名）再和信息一起发送，以保证这个hash值不被修改。
 
-## https 加密过程
+## <span id="1b8329b5fb3f19608fea91a9748eb29c"/>https 加密过程
 
-### `一、HTTP 访问过程`
+
+### <span id="53ce07487a58af1c4f22e77db403fb07"/>`一、HTTP 访问过程`
+
 
 ![](./images/https2.png)
 
@@ -71,7 +90,8 @@ hash值一般都会加密后（也就是签名）再和信息一起发送，以�
 
 （3） 冒充风险：黑客可以冒充他人身份参与通信。
 
-### `二、HTTP 向 HTTPS 演化的过程`
+### <span id="8ab9eb07fe69e34212efe6987c7d2d59"/>`二、HTTP 向 HTTPS 演化的过程`
+
 
 第一步：为了防止上述现象的发生，人们想到一个办法：对传输的信息加密（即使黑客截获，也无法破解）
 
