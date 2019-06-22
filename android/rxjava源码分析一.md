@@ -1,6 +1,22 @@
-# Rxjava 源码分析一
+`目录：`
+- [Rxjava 源码分析一
+](#f62013c6d5488aa0cbeef7dc15517cc8)
+  - [分析Single类链式调用的流程
+](#214af7a65bef6cb7f9eb2acb14632390)
+    - [subscribe()调用前
+](#dc5ca68fff19f36b7eb2d096d7c76079)
+    - [subscribe()调用后
+](#b7d1b84545dacb4d7bb53b74a5cfbe3f)
+    - [调用onSubscribe(disposable)
+](#14adfc3c9b90862663b3ca177f4fe9d5)
+    - [流程
+](#2a6d93c65617339645a09d640c5acb53)
+---
+# <span id="f62013c6d5488aa0cbeef7dc15517cc8"/>Rxjava 源码分析一
 
-## 分析Single类链式调用的流程
+
+## <span id="214af7a65bef6cb7f9eb2acb14632390"/>分析Single类链式调用的流程
+
 
 `简单分析数据变换map，线程切换：` 
 
@@ -33,7 +49,8 @@ public static void main (String[] args) {
 
 rxjava触发任务执行的条件--调用subscribe()，所以分两步来说明调用过程：
 
-### subscribe()调用前
+### <span id="dc5ca68fff19f36b7eb2d096d7c76079"/>subscribe()调用前
+
 1.Single.just()创建SingleJust对象：
 ```
   public static <T> Single<T> just(final T item) {
@@ -64,7 +81,8 @@ rxjava触发任务执行的条件--调用subscribe()，所以分两步来说明�
 ```
 构建完毕
 
-### subscribe()调用后
+### <span id="b7d1b84545dacb4d7bb53b74a5cfbe3f"/>subscribe()调用后
+
 
 SingleObserveOn调用subscribe(onSuccess, onError),执行父类Single#subscribe(onSuccess, onError)：
 ```
@@ -372,7 +390,8 @@ static final class MapSingleObserver<T, R> implements SingleObserver<T> {
 ->
 此时的observer是MapSingleObserver类，至此，Observer完整的调用链构建完毕，从SingleJust#subscribeActual(observer)开始从顶层调用Observer
 
-### 调用onSubscribe(disposable)
+### <span id="14adfc3c9b90862663b3ca177f4fe9d5"/>调用onSubscribe(disposable)
+
 MapSingleObserver#onSubscribe(disposable), t是SubscribeOnObserver类
 ```
  public void onSubscribe(Disposable d) {
@@ -417,7 +436,8 @@ downstream是ObserveOnSingleObserver类
 ```
 完毕...
 
-### 流程
+### <span id="2a6d93c65617339645a09d640c5acb53"/>流程
+
 
 <img src="images/rxjava01.jpg" height="451" width="526"/>
 
