@@ -1,38 +1,26 @@
 `目录：`
-- [源码编译xposed
-](#624db7fd8e42907f4401c841fab33452)
-  - [编译android源码
-](#e1eb2a02fa6c317eb7c1e3e81050425d)
-  - [编译XposedBridge
-](#1fb0ba8e09ff9c89eef5f87cc68a7211)
-  - [使用xposed tools
-](#31590eaf6b8a415b36106dd9058c60e4)
-      - [下载 [XposedTools](https://github.com/rovo89/XposedTools)
-](#fd04c74f9a2bbed78cec8c1ecba2ef9c)
-      - [配置build.conf文件
-](#7b2f262d5cffe0ff174bffec446d87f3)
-      - [替换xposed和art文件
-](#85865f45e54c0904289ea3307577aa2a)
-      - [编译
-](#e8669010421839374149ee56b59accf9)
-      - [将xposed框架集成到Android系统
-](#4bb386e4200227dd11f301285174d245)
-        - [替换文件
-](#93e95c65c4534c5404db324dd90f90be)
-        - [移动文件 
-](#bbdfe9f36e42132fa2304332a3c05b97)
-        - [重新生成镜像文件
-](#8e7aa9c66cdfadd9486b0e7dbcfcb815)
+- [源码编译xposed](#b780d7853749cc4834e213997efde8f1)
+  - [编译android源码](#50b51e10a59c1e52ced2f2717c473f0d)
+  - [编译XposedBridge](#33acd2ce7824a83c6fe59a7e6002f326)
+  - [使用xposed tools](#1d4be69ccc727d2a32730d5ed88c1473)
+      - [下载XposedTools](#56d68943d22e86f57c0bf90f623cea11)
+      - [配置build.conf文件](#2bad87b60d1edf183aea491b858e1813)
+      - [替换xposed和art文件](#4da943807bd4f9777f5df23808e84760)
+      - [编译](#38e956ced3d258de195759cc9f7bf527)
+      - [将xposed框架集成到Android系统](#bca7bc9d14192ede7d83b70ff5ac4a1a)
+        - [替换文件](#22e7f61591e1c09d90b2002daea6bd3f)
+        - [移动文件 ](#a32c80003f81147090a7742a0959cde7)
+        - [重新生成镜像文件](#d3660ac4a7388b1a3285401ae292974b)
 ---
-# <span id="624db7fd8e42907f4401c841fab33452"/>源码编译xposed
+# <span id="b780d7853749cc4834e213997efde8f1"/>源码编译xposed
 
 
-## <span id="e1eb2a02fa6c317eb7c1e3e81050425d"/>编译android源码
+## <span id="50b51e10a59c1e52ced2f2717c473f0d"/>编译android源码
 
 
 编译android 7.1.1， sdk 25；XposedBridge下载版本是v89，其他的是v88
 
-## <span id="1fb0ba8e09ff9c89eef5f87cc68a7211"/>编译XposedBridge
+## <span id="33acd2ce7824a83c6fe59a7e6002f326"/>编译XposedBridge
 
 
 下载XposedBridge的源代码
@@ -43,13 +31,14 @@
 
 存放在/out/target/product/xxx/system/framework/下。
 
-## <span id="31590eaf6b8a415b36106dd9058c60e4"/>使用xposed tools
+## <span id="1d4be69ccc727d2a32730d5ed88c1473"/>使用xposed tools
 
 
-#### <span id="fd04c74f9a2bbed78cec8c1ecba2ef9c"/>下载 [XposedTools](https://github.com/rovo89/XposedTools)
+#### <span id="56d68943d22e86f57c0bf90f623cea11"/>下载XposedTools
 
+[XposedTools](https://github.com/rovo89/XposedTools)
 
-#### <span id="7b2f262d5cffe0ff174bffec446d87f3"/>配置build.conf文件
+#### <span id="2bad87b60d1edf183aea491b858e1813"/>配置build.conf文件
 
 
 build.conf文件是一个配置文件，会被build.pl读取使用。build文件中主要定义了编译xposed的结果的存放路径，android源码的路径，还有一些版本信息之类的值。
@@ -63,7 +52,7 @@ makeflags是设置在后边编译过程中使用的线程数。
 AospDir指向的路径是android源码存放的路径，前边的值是源码对应的SDK的版本号。这里我指向的是android5.1.1的源码，对应的android sdk的版本是22。
 ```
 
-#### <span id="85865f45e54c0904289ea3307577aa2a"/>替换xposed和art文件
+#### <span id="4da943807bd4f9777f5df23808e84760"/>替换xposed和art文件
 
 
 从github上克隆xposed两个仓库到本地。分别是
@@ -81,7 +70,7 @@ xposed文件夹移动到 源码目录/frameworks/base/cmds/中
 如果虚拟机需要root，xposed中部分代码需要修改，参考
 [模拟器root](../模拟器root.md)
 
-#### <span id="e8669010421839374149ee56b59accf9"/>编译
+#### <span id="38e956ced3d258de195759cc9f7bf527"/>编译
 
 
 在build.conf文件中outdir目录下创建一个java文件夹，然后将XposedBridge.jar包放到java文件夹下
@@ -98,20 +87,20 @@ xposed文件夹移动到 源码目录/frameworks/base/cmds/中
 编译完成后，生成文件：
 包括lib文件夹下的五个so库和bin文件加下的四个可执行程序以及一个配置文件。
 
-#### <span id="4bb386e4200227dd11f301285174d245"/>将xposed框架集成到Android系统
+#### <span id="bca7bc9d14192ede7d83b70ff5ac4a1a"/>将xposed框架集成到Android系统
 
 
-##### <span id="93e95c65c4534c5404db324dd90f90be"/>替换文件
+##### <span id="22e7f61591e1c09d90b2002daea6bd3f"/>替换文件
 
 用第四部分中生成的bin文件夹和lib文件夹下的文件替换xxx/out/target/product/hammerhead/system/文件夹下的bin文件和lib文件里的相同的文件。
 需要注意的是用xposed编译生成的app_process32_xposed替换system/bin文件夹下的app_process32,
 名字还是app_process32
 
-##### <span id="bbdfe9f36e42132fa2304332a3c05b97"/>移动文件 
+##### <span id="a32c80003f81147090a7742a0959cde7"/>移动文件 
 
 将xposed.prop文件移动到system文件夹下
 
-##### <span id="8e7aa9c66cdfadd9486b0e7dbcfcb815"/>重新生成镜像文件
+##### <span id="d3660ac4a7388b1a3285401ae292974b"/>重新生成镜像文件
 
 
 ```
